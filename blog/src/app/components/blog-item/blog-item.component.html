@@ -1,0 +1,17 @@
+<!--<blog-item-image [image]="image"></blog-item-image>-->
+<!--<blog-item-text [text]="text"></blog-item-text>-->
+<!--<div class="">-->
+<!--  <blog-item-image [image]="image"/>-->
+<!--  <div class="">-->
+<!--    <blog-item-text class="text-success" [text]="text"></blog-item-text>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="d-flex justify-content-center align-items-center m-5 ">
+  <div class="card p-3">
+    <div class="card-body text-center">
+      <blog-item-image [image]="image" class="img-fluid img-thumbnail"/>
+      <h2>{{ title }}</h2>
+      <blog-item-text [text]="text" class="display-6"></blog-item-text>
+    </div>
+  </div>
+</div>
