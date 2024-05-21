@@ -64,16 +64,28 @@ const posts = [
 ]
 
 
+import {HttpClient} from "@angular/common/http";
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() {
+  private url = 'http://localhost:3000';
+
+  constructor(private http: HttpClient) {
   }
 
-  public getAll() {
-    return posts;
+  getAll() {
+    return this.http.get(this.url + '/api/posts');
   }
+  getById(id: string) {
+    return this.http.get(this.url + '/api/posts/' + id);
+  }
+
+
+
 }
+
+
 
